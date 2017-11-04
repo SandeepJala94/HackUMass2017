@@ -775,3 +775,7 @@ JavaScript error: https://abs.twimg.com/k/en/12.video_player_a.en.6a9a3bb235861b
 JavaScript error: https://abs.twimg.com/k/en/12.video_player_a.en.6a9a3bb235861b1f86a2.js, line 15: TypeError: t.videoTag is undefined
 JavaScript error: https://abs.twimg.com/k/en/12.video_player_a.en.6a9a3bb235861b1f86a2.js, line 15: TypeError: t.videoTag is undefined
 JavaScript error: https://abs.twimg.com/k/en/12.video_player_a.en.6a9a3bb235861b1f86a2.js, line 15: TypeError: t.videoTag is undefined
+console.error: 
+  Could not write session state file 
+  Message: Unix error 28 during operation write on file /tmp/rust_mozprofile.RRQfhGd2DZgL/sessionstore-backups/recovery.jsonlz4.tmp (No space left on device)
+  
