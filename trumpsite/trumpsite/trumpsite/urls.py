@@ -23,5 +23,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^chatter/', include('chatter.urls')),
-    url(r'^$', RedirectView.as_view(url='/catalog/', permanent=True)),
+    url(r'^$', RedirectView.as_view(url='/chatter/', permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

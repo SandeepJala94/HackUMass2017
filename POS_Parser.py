@@ -3,7 +3,7 @@
 
 # Get the contents of the file
 # Delimit by spaces and grab the last element
-f = open('./trump_tweets_pos.txt', 'r')
+f = open('./trump_tweets_pos.txt', 'r', encoding = 'utf-8')
 
 # Make a list of pos
 pos_lines = []
@@ -18,7 +18,6 @@ isfound = False
 
 # Loop through all of the pos data
 for pos in f:
-    # print("i:", i, ",", pos)
     # Delimit the line by space
     line_split = pos.split(" ")
     # Get the word
@@ -80,6 +79,7 @@ for p in pos_lines:
 bigram_pos_counts = dict()
 
 for tweet in tweet_patterns:
+    tweet = [pos for pos in tweet if pos in ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS', 'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'SYM', 'TO', 'UH', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WP$', 'WRB']]
     for i in range(len(tweet)-1):
         bigram_pos = (tweet[i], tweet[i+1])
         if bigram_pos in bigram_pos_counts:
@@ -100,5 +100,14 @@ for pos in words:
     f.write(pos + ":" + str(words[pos]) + '\n\n')
 
 f.close()
-print('done')
+
+bigram_counts_file = open('bigram_counts.txt', 'w')
+output = ''
+for count in bigram_pos_counts:
+    output = count[0] + ',' + count[1] + ': ' + str(bigram_pos_counts[count]) + '\n'
+    bigram_counts_file.write(output + "\n")
+    # print(output)
+    # bigram_counts_file.write(output)
+bigram_counts_file.close()
+print("done")
 
