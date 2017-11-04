@@ -17,20 +17,24 @@ words = dict()
 isfound = False
 
 # Loop through all of the pos data
-for i, pos in zip(range(100), f):
-    print("i:", i, ",", pos)
+for pos in f:
+    # print("i:", i, ",", pos)
     # Delimit the line by space
     line_split = pos.split(" ")
     # Get the word
-    word = line_split[0]
+    word = line_split[0].lower()
     # Get the pos
     part_of_speech = line_split[-1].replace("\n", "")
     # Determine if the part of speech is a key in the dictionary
     # see if the word exists in the dictionary and the word is
     # not a link or @ or #
-    if part_of_speech in words and not word.__contains__(".com") \
+    if part_of_speech in words \
+            and not word.__contains__(".*:\/\/.*") \
+            and not word.__contains__(".*\..*\..*\/.*") \
+            and not word.__contains__(".*@.*\..*")\
             and not word.__contains__("@")\
-            and not word.__contains__("#"):
+            and not word.__contains__("#")\
+            and not word.__contains__("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}"):
         for j, tup in enumerate(words[part_of_speech]):
             if word == tup[0]:
                 words[part_of_speech][j] = (word, tup[1] + 1)
@@ -44,9 +48,12 @@ for i, pos in zip(range(100), f):
             isfound = False
 
     else:
-        if not word.__contains__(".com") \
+        if not word.__contains__(".*:\/\/.*") \
+           and not word.__contains__(".*\..*\..*\/.*") \
+           and not word.__contains__(".*@.*\..*")\
            and not word.__contains__("@") \
-           and not word.__contains__("#"):
+           and not word.__contains__("#") \
+           and not word.__contains__("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}"):
             words[part_of_speech] = [(word, 1)]
     pos_lines.append(part_of_speech)
 
@@ -64,10 +71,10 @@ for p in pos_lines:
     else:
         temp.append(p)
 
-#print(pos_lines)
-print("Tweet Patterns: ", tweet_patterns)
-#print('\n')
-#print(words)
+# print(pos_lines)
+# print("Tweet Patterns: ", tweet_patterns)
+# print('\n')
+# print(words)
 
 
 bigram_pos_counts = dict()
@@ -82,3 +89,16 @@ for tweet in tweet_patterns:
 
 print()
 print(bigram_pos_counts)
+f.close()
+
+for pos in words:
+    words[pos].sort(key=lambda e: -e[1])
+
+f = open('trump-pos-corpus.txt', 'w')
+
+for pos in words:
+    f.write(pos + ":" + str(words[pos]) + '\n\n')
+
+f.close()
+print('done')
+
