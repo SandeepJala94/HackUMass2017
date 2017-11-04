@@ -16,6 +16,8 @@ tweet_patterns = []
 words = dict()
 isfound = False
 
+print(pos_lines)
+
 # Loop through all of the pos data
 for i, pos in zip(range(100), f):
     print("i:", i, ",", pos)
@@ -64,21 +66,7 @@ for p in pos_lines:
     else:
         temp.append(p)
 
-#print(pos_lines)
-print("Tweet Patterns: ", tweet_patterns)
-#print('\n')
-#print(words)
-
-
-bigram_pos_counts = dict()
-
-for tweet in tweet_patterns:
-    for i in range(len(tweet)-1):
-        bigram_pos = (tweet[i], tweet[i+1])
-        if bigram_pos in bigram_pos_counts:
-            bigram_pos_counts[bigram_pos] += 1
-        else:
-            bigram_pos_counts[bigram_pos] = 1
-
-print()
-print(bigram_pos_counts)
+# print(pos_lines)
+print(tweet_patterns)
+print('\n')
+print(words)
