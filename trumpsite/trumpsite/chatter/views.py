@@ -1,5 +1,13 @@
 from django.shortcuts import render
-from .models import Car, User, Technician, FutureRepair, PhoneTimings, EmailTimings, Notifications, Repair
-
+from .models import Chat
 
 # Create your views here.
+def index(request):
+    """
+    View function for home page of site
+    """
+    return render(
+        request,
+        'index.html',
+        context={},
+    )
