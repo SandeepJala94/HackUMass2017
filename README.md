@@ -35,8 +35,8 @@ The webpages were scraped to gather information for
 the chatbot.
 
 ### HTML source files
--politico-trump.html
--twitter-trump.html
+- politico-trump.html
+- twitter-trump.html
 
 PYTHON
 ------
