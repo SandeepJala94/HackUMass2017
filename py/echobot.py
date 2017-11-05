@@ -22,8 +22,6 @@ file = open("../txt/trump_tweets_pos.txt", "r",encoding="utf-8")
 trump_tweets_pos = file.read()
 
 def createSentence(mainWord, mainPOS):
-    pass
-
     #print("Number of lines in Bigram Counts = ", count)
     
 def get_url(url):
