@@ -45,9 +45,9 @@ Python scripts are then used to parse and clean the data
 from it's original source.
 
 ### Libraries
--Selenium
--BeautifulSoup
--nltk
+- Selenium
+- BeautifulSoup
+- nltk
 
 TEXT FILES
 ----------
