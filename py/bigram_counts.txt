@@ -1,0 +1,1060 @@
+NNP,PRP: 105
+
+PRP,IN: 38
+
+IN,PDT: 3
+
+PDT,DT: 9
+
+DT,JJ: 218
+
+JJ,JJ: 59
+
+JJ,NNP: 210
+
+PRP$,JJ: 62
+
+JJ,NN: 413
+
+NN,TO: 110
+
+TO,VB: 252
+
+VB,JJ: 48
+
+NNP,IN: 283
+
+IN,NN: 142
+
+VBG,TO: 38
+
+TO,NNP: 64
+
+NNP,NNP: 1411
+
+NNP,VBD: 94
+
+VBD,NNP: 31
+
+IN,NNP: 525
+
+NNP,JJ: 70
+
+JJ,TO: 42
+
+VB,IN: 86
+
+VBG,RB: 35
+
+RB,JJ: 110
+
+TO,NN: 9
+
+NN,IN: 459
+
+IN,PRP$: 128
+
+JJ,NNPS: 10
+
+NNPS,IN: 14
+
+DT,NN: 335
+
+NNP,VBZ: 143
+
+VBZ,DT: 65
+
+JJ,CC: 52
+
+CC,JJ: 81
+
+TO,PRP$: 18
+
+PRP$,NN: 137
+
+NN,CC: 130
+
+CC,TO: 9
+
+PRP$,NNP: 44
+
+NN,DT: 29
+
+DT,VBN: 5
+
+VBN,NNP: 13
+
+NNP,CD: 23
+
+CD,IN: 23
+
+IN,DT: 397
+
+DT,JJS: 31
+
+JJS,JJ: 2
+
+JJ,NNS: 157
+
+NNS,IN: 182
+
+IN,NNS: 43
+
+NNS,VBD: 24
+
+NNP,NN: 262
+
+NN,JJ: 109
+
+VBD,RP: 10
+
+RP,IN: 15
+
+NN,NNP: 157
+
+MD,RB: 54
+
+RB,VB: 93
+
+VB,VBG: 24
+
+NNP,CC: 231
+
+CC,DT: 56
+
+DT,NNPS: 30
+
+NNP,RB: 63
+
+VB,PRP: 48
+
+PRP,RP: 5
+
+PRP,RB: 18
+
+RB,VBD: 38
+
+VBD,PRP: 14
+
+PRP,MD: 111
+
+MD,VB: 190
+
+VBG,CC: 7
+
+CC,VBG: 13
+
+VBG,IN: 78
+
+RB,NNP: 12
+
+IN,VBG: 58
+
+VBG,PRP: 14
+
+PRP,VBD: 78
+
+VBD,RB: 26
+
+NNP,NNPS: 35
+
+NNPS,NNS: 2
+
+NNS,VBP: 86
+
+VBP,DT: 41
+
+JJ,IN: 58
+
+DT,NNP: 293
+
+VBN,IN: 87
+
+DT,DT: 4
+
+VBZ,VBN: 45
+
+JJ,CD: 8
+
+CD,NNS: 40
+
+VB,DT: 99
+
+IN,PRP: 109
+
+VBD,DT: 68
+
+NNP,WP: 28
+
+WP,VBD: 22
+
+VBD,CC: 6
+
+CC,RB: 42
+
+RB,RB: 42
+
+VBD,PRP$: 11
+
+VBD,IN: 36
+
+NNPS,NN: 6
+
+NNPS,VBP: 23
+
+VBP,NNP: 22
+
+CC,NNP: 128
+
+VBZ,IN: 39
+
+NNP,POS: 30
+
+POS,JJ: 5
+
+NN,VBP: 18
+
+VBP,JJ: 43
+
+NNP,MD: 47
+
+VB,WP: 5
+
+WP,VBZ: 22
+
+VBZ,JJ: 40
+
+JJ,VBZ: 6
+
+VBZ,PRP: 10
+
+NN,VBZ: 82
+
+IN,CC: 7
+
+CC,VBD: 11
+
+WP,IN: 3
+
+NNP,DT: 53
+
+CC,CC: 1
+
+CC,NN: 72
+
+VBZ,VBG: 55
+
+VBG,WRB: 1
+
+WRB,DT: 5
+
+VBZ,RB: 66
+
+RB,VBG: 30
+
+DT,IN: 32
+
+NN,VBG: 31
+
+IN,IN: 27
+
+NN,VBD: 35
+
+VBD,VBN: 12
+
+VBN,RP: 5
+
+IN,CD: 60
+
+NN,NN: 218
+
+NN,MD: 18
+
+VBG,JJ: 31
+
+JJ,VBG: 9
+
+VBG,DT: 46
+
+VB,VBN: 38
+
+NNP,VBG: 37
+
+VBG,NN: 26
+
+PRP$,RB: 3
+
+RB,VBN: 49
+
+VBN,CC: 12
+
+POS,NN: 4
+
+NNP,WRB: 8
+
+WRB,VBZ: 6
+
+VBZ,PRP$: 8
+
+TO,RB: 2
+
+CC,VBN: 4
+
+DT,NNS: 70
+
+VBP,VBG: 68
+
+VBG,NNP: 35
+
+NNPS,MD: 11
+
+CC,VB: 29
+
+NN,PRP: 65
+
+VB,PRP$: 32
+
+NNP,TO: 68
+
+CD,NNP: 20
+
+IN,JJ: 95
+
+CC,CD: 3
+
+PRP,VBP: 208
+
+VBP,VBN: 44
+
+VBN,TO: 22
+
+VB,NNP: 59
+
+TO,DT: 71
+
+PRP,VBZ: 55
+
+VBG,PRP$: 20
+
+RB,TO: 24
+
+VB,NN: 34
+
+NN,WDT: 26
+
+WDT,VBZ: 24
+
+VBZ,NNP: 28
+
+VBP,TO: 22
+
+NNS,TO: 30
+
+NN,NNS: 82
+
+NNP,EX: 1
+
+EX,VBZ: 9
+
+RB,NN: 12
+
+VB,RB: 48
+
+VB,TO: 21
+
+RB,IN: 80
+
+RB,JJR: 15
+
+JJR,IN: 16
+
+VBD,JJ: 29
+
+VBD,TO: 21
+
+VBD,CD: 7
+
+NNS,RB: 24
+
+VBP,PRP: 18
+
+DT,RB: 27
+
+JJ,JJR: 6
+
+JJR,JJ: 3
+
+PRP$,NNS: 50
+
+NNS,VBZ: 8
+
+DT,CD: 16
+
+NNS,CC: 92
+
+NNS,VBN: 11
+
+NNP,VB: 17
+
+VBP,IN: 38
+
+CC,PRP: 35
+
+VBP,PRP$: 10
+
+PRP,WP: 2
+
+WP,MD: 8
+
+VBP,RB: 58
+
+DT,JJR: 4
+
+PRP,TO: 15
+
+NNPS,CC: 5
+
+VBG,VBN: 15
+
+VBN,DT: 17
+
+NN,RB: 39
+
+RB,VBZ: 19
+
+DT,CC: 4
+
+NNP,FW: 4
+
+FW,NNP: 3
+
+PRP,VB: 9
+
+NNS,WP: 14
+
+JJ,VBN: 4
+
+VBN,NN: 10
+
+RB,PRP: 24
+
+CC,VBP: 7
+
+NNP,NNS: 69
+
+VBD,NN: 18
+
+JJR,NNP: 2
+
+VB,VBZ: 4
+
+IN,WP: 5
+
+VBP,NN: 17
+
+NN,VBN: 18
+
+VB,RP: 9
+
+RP,PRP$: 2
+
+RB,VBP: 7
+
+VBP,VBZ: 1
+
+DT,MD: 6
+
+VB,JJS: 1
+
+JJS,RB: 3
+
+NNS,NNS: 12
+
+CC,NNS: 52
+
+CC,PRP$: 31
+
+VB,CC: 15
+
+NN,PRP$: 8
+
+NNP,RBR: 3
+
+RBR,NN: 5
+
+CD,VBN: 2
+
+VBN,RBR: 5
+
+NN,CD: 11
+
+PRP,CC: 20
+
+NNP,WDT: 13
+
+WDT,MD: 6
+
+RB,DT: 19
+
+JJS,NN: 26
+
+WP,PRP: 10
+
+NNPS,VBZ: 4
+
+VBP,NNS: 10
+
+NNS,MD: 19
+
+VBD,EX: 2
+
+EX,VBD: 4
+
+VBN,VBD: 1
+
+RB,EX: 3
+
+DT,VBZ: 14
+
+VBZ,NNS: 8
+
+CC,WRB: 2
+
+WRB,VBP: 1
+
+NNPS,DT: 1
+
+CD,TO: 3
+
+CD,RB: 2
+
+VBZ,WP: 3
+
+WP,NNP: 5
+
+NN,WRB: 5
+
+IN,RB: 24
+
+VBG,RP: 8
+
+POS,DT: 1
+
+CD,CC: 3
+
+RB,RBR: 9
+
+VBN,JJ: 12
+
+RB,CD: 6
+
+JJ,DT: 8
+
+JJ,RB: 12
+
+JJ,PRP: 9
+
+TO,PRP: 3
+
+NN,WP: 14
+
+CC,IN: 12
+
+NNPS,PRP: 2
+
+VB,VB: 7
+
+WRB,RB: 5
+
+PRP,NNP: 11
+
+RBS,JJ: 5
+
+POS,IN: 5
+
+IN,TO: 8
+
+TO,WP: 2
+
+WP,DT: 3
+
+NN,JJR: 2
+
+JJR,NN: 10
+
+WP,VBP: 20
+
+RP,JJ: 2
+
+NNS,NN: 30
+
+IN,EX: 1
+
+VBN,PDT: 1
+
+NN,EX: 2
+
+EX,MD: 2
+
+TO,JJ: 10
+
+IN,JJS: 4
+
+JJS,NNP: 3
+
+VBN,VBG: 11
+
+JJ,PRP$: 7
+
+RP,TO: 3
+
+CC,MD: 9
+
+NN,POS: 3
+
+POS,NNP: 12
+
+NNP,PRP$: 8
+
+VBG,NNS: 27
+
+TO,VBG: 14
+
+NNPS,NNP: 6
+
+NNS,VBG: 18
+
+NNPS,TO: 7
+
+NNS,NNP: 15
+
+CD,NN: 41
+
+PRP,DT: 16
+
+DT,VBG: 5
+
+WDT,VBD: 4
+
+JJS,VBP: 1
+
+CD,CD: 10
+
+NNP,VBP: 26
+
+VB,WRB: 8
+
+WRB,PRP: 8
+
+PRP$,CD: 1
+
+VBZ,CC: 1
+
+PRP$,IN: 2
+
+NNP,JJS: 4
+
+NNS,JJ: 11
+
+VBD,VBZ: 1
+
+RBR,IN: 8
+
+NNP,RP: 4
+
+RP,CC: 4
+
+VBD,JJS: 2
+
+VB,NNS: 23
+
+VBD,NNS: 7
+
+NNS,RBR: 2
+
+PRP,NN: 8
+
+VBZ,NN: 11
+
+VBP,WP: 3
+
+DT,PRP: 4
+
+WDT,RB: 4
+
+VBN,VBZ: 1
+
+RP,NN: 3
+
+VBZ,CD: 4
+
+JJS,IN: 9
+
+TO,CD: 5
+
+PRP,CD: 1
+
+VBD,VB: 1
+
+VBP,VBD: 2
+
+WDT,NNP: 1
+
+CC,WP: 2
+
+IN,NNPS: 4
+
+NNS,DT: 6
+
+TO,NNS: 4
+
+VBP,VB: 4
+
+RP,NNS: 1
+
+VBP,POS: 1
+
+POS,WP: 1
+
+VBD,WP: 1
+
+RP,NNP: 1
+
+DT,RBS: 3
+
+JJR,MD: 1
+
+NNP,VBN: 3
+
+VBN,PRP: 6
+
+VBN,JJR: 2
+
+CD,DT: 4
+
+NNPS,RB: 2
+
+NNS,VB: 2
+
+VBN,VBN: 6
+
+JJR,NNS: 2
+
+NNS,WDT: 5
+
+WDT,VBP: 5
+
+PRP$,NNPS: 1
+
+TO,JJS: 1
+
+NNS,POS: 1
+
+POS,NNS: 3
+
+VBP,RP: 2
+
+RP,WP: 1
+
+VBZ,MD: 3
+
+NN,VB: 3
+
+WRB,JJ: 6
+
+NNPS,WP: 2
+
+VBN,RB: 12
+
+RBR,JJ: 7
+
+JJ,VBP: 7
+
+RP,WRB: 1
+
+VB,JJR: 6
+
+IN,VBZ: 2
+
+DT,RP: 2
+
+JJS,NNS: 7
+
+JJ,VBD: 2
+
+VBG,CD: 3
+
+WP,NN: 1
+
+PRP,JJ: 7
+
+RP,DT: 5
+
+NNS,NNPS: 1
+
+CC,RBR: 4
+
+RBR,RB: 3
+
+VB,CD: 2
+
+NNS,PRP: 9
+
+MD,NNP: 6
+
+VBZ,FW: 1
+
+VBN,WP: 2
+
+VBZ,TO: 11
+
+VBD,VBG: 5
+
+RP,VBD: 1
+
+JJR,CC: 5
+
+CC,JJR: 5
+
+VBN,NNS: 2
+
+VBN,MD: 2
+
+PRP,WDT: 1
+
+CD,PRP: 1
+
+MD,PRP: 4
+
+JJR,POS: 1
+
+JJ,JJS: 1
+
+JJR,JJS: 1
+
+DT,VBP: 5
+
+VBP,CC: 3
+
+JJS,VBD: 1
+
+POS,JJS: 1
+
+IN,WRB: 2
+
+CD,JJS: 2
+
+DT,WP: 4
+
+PRP$,JJS: 3
+
+NNS,WRB: 5
+
+WRB,MD: 1
+
+CD,NNPS: 3
+
+NNPS,PRP$: 1
+
+VBD,VBD: 1
+
+IN,VBN: 7
+
+JJ,VB: 5
+
+MD,TO: 1
+
+MD,DT: 2
+
+DT,VB: 2
+
+JJS,TO: 1
+
+PRP,PRP: 2
+
+VBP,VBP: 1
+
+PRP,WRB: 2
+
+CD,JJ: 4
+
+FW,NN: 1
+
+NN,RBR: 1
+
+RBR,TO: 1
+
+DT,VBD: 2
+
+VBN,PRP$: 1
+
+IN,VB: 1
+
+IN,WDT: 2
+
+WDT,PRP: 3
+
+VBP,CD: 4
+
+VBZ,RP: 2
+
+RP,PRP: 1
+
+VBZ,WRB: 1
+
+WRB,TO: 1
+
+RB,CC: 5
+
+CC,NNPS: 2
+
+JJS,PRP: 1
+
+NN,RP: 1
+
+WRB,NNS: 2
+
+RB,PRP$: 4
+
+PRP$,VBZ: 1
+
+RB,MD: 2
+
+VBD,RBR: 1
+
+VBG,VBZ: 2
+
+PRP$,VB: 1
+
+VBG,JJR: 2
+
+WP,JJ: 1
+
+TO,NNPS: 2
+
+WDT,PRP$: 1
+
+CC,JJS: 2
+
+WRB,NNP: 3
+
+JJS,VBN: 1
+
+WP,RB: 2
+
+POS,VB: 1
+
+VB,MD: 1
+
+JJS,CC: 2
+
+CC,RBS: 2
+
+RBS,CD: 1
+
+CD,VBD: 1
+
+NNP,PDT: 1
+
+VB,RBR: 1
+
+JJR,JJR: 1
+
+RB,WDT: 1
+
+VBP,MD: 1
+
+NNS,PRP$: 1
+
+VBD,NNPS: 2
+
+TO,IN: 1
+
+NN,NNPS: 3
+
+CD,FW: 1
+
+FW,CD: 1
+
+JJR,DT: 1
+
+VBD,JJR: 1
+
+IN,JJR: 2
+
+PRP$,VBN: 2
+
+RP,RB: 2
+
+VBG,VBG: 1
+
+NNP,JJR: 1
+
+PRP,PRP$: 2
+
+CC,VBZ: 2
+
+VBG,PDT: 1
+
+RB,NNS: 3
+
+VBP,WRB: 1
+
+VB,NNPS: 1
+
+NNPS,VBN: 1
+
+RB,JJS: 2
+
+PRP,JJR: 1
+
+VBN,VB: 1
+
+NNS,RP: 1
+
+VBN,CD: 1
+
+JJ,MD: 1
+
+RB,RBS: 1
+
+RBS,NN: 1
+
+VBZ,VB: 1
+
+FW,JJ: 1
+
+WDT,DT: 1
+
+WRB,NN: 2
+
+WDT,NNS: 1
+
+NNPS,VBD: 1
+
+DT,RBR: 2
+
+VB,WDT: 2
+
+RB,WRB: 1
+
+WRB,JJS: 1
+
+JJS,DT: 2
+
+JJ,EX: 1
+
+WDT,NN: 1
+
+CC,PDT: 1
+
+PDT,IN: 1
+
+DT,WDT: 1
+
+RBR,NNP: 1
+
+PRP,VBN: 1
+
+RB,WP: 1
+

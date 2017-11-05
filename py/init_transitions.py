@@ -84,5 +84,3 @@ with open('../txt/pos-transitions.txt', 'w') as outfile:
     json.dump(markov, outfile)
 
 print(markov)
-
-
