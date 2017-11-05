@@ -4,12 +4,28 @@
 
 {% block usercontent %}
 <!-- Main Row Content for page components -->
-<div class="row">
-
-    <div class="col-md-12">
-        <div class="LiveChat">
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <div class="panel-title">
+            Trump Bot Chat
         </div>
     </div>
+    <div class="panel-body">
+        <div class="text-center">
+            <textarea id="chatwindow" class="text-left" readonly rows="10" cols="50">
+                {% for message in chat %}
+                {{ message.name }}: {{ message.contents }}
+                {% endfor %}
+            </textarea>
+        </div>
+        <br/>
+        <hr>
+        <form class="text-center">
+            <input type="text" id="chatinput" size="45">
+            <button type="button" class="btn btn-primary">submit</button>
+            <!-- End of first button of group -->
+        </form>
 
-</div> <!-- End of Main Row Content for page components -->
+    </div>
+</div>
 {% endblock %}

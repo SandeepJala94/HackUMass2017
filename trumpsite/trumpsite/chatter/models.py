@@ -1,6 +1,7 @@
 from django.db import models
 import uuid
 
+
 # Create your models here.
 class Chat(models.Model):
     """
@@ -14,4 +15,4 @@ class Chat(models.Model):
         """
         String for representing the Model object (in Admin site etc.)
         """
-        return self.id
+        return str(self.name) + ": " + str(self.contents)

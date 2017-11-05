@@ -1,7 +1,6 @@
 # Find common linguistic patterns
 # in Donald Trump Tweets
 
-import pandas
 import re
 
 # Get the contents of the file

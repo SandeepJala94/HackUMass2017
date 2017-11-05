@@ -25,7 +25,11 @@ sentence (i.e. noun, verb, adjective, etc.).
 
 4. The data is then passed to another python script where it
 is cleared of any extraneous data such as *urls* or special
-characters.
+characters. It is then organized by it's part of sentence 
+and iterations are added together.
+
+Example of Adjectives:
+`JJ:[('great', 118), ('many', 37), ('big', 32), ('much', 22), ('last', 21), ('good', 20), ('first', 19), ('american', 17), ('wonderful', 15), ('military', 15)]`
 
 Data
 ====

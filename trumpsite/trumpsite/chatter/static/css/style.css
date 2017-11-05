@@ -28,4 +28,10 @@
     list-style-type: none;
 }
 
+textarea {
+    content-align:left !important;
+    editable:none;
+    resize:none;
+}
+
 

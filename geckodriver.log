@@ -5,3 +5,4 @@
 1509861648047	Marionette	INFO	Listening on port 41747
 1509861648237	Marionette	WARN	TLS certificate errors will be ignored for this session
 1509861648309	Marionette	DEBUG	Register listener.js for window 2147483649
+1509862985088	Marionette	DEBUG	Register listener.js for window 4294967297
