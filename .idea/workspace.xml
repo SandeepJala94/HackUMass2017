@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="609ed80a-debf-49ca-8bad-4973e7491ea0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/POS_Parser.py" afterPath="$PROJECT_DIR$/POS_Parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigram_counts.txt" afterPath="$PROJECT_DIR$/bigram_counts.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trump-pos-corpus.txt" afterPath="$PROJECT_DIR$/trump-pos-corpus.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,9 +16,11 @@
       <file leaf-file-name="POS_Parser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/POS_Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="396">
+              <caret line="49" column="114" lean-forward="true" selection-start-line="49" selection-start-column="114" selection-end-line="49" selection-end-column="114" />
+              <folding>
+                <element signature="e#60#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +57,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="256" />
-    <option name="y" value="53" />
+    <option name="x" value="334" />
+    <option name="y" value="33" />
     <option name="width" value="646" />
     <option name="height" value="736" />
   </component>
@@ -182,9 +181,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/POS_Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="49" column="114" lean-forward="true" selection-start-line="49" selection-start-column="114" selection-end-line="49" selection-end-column="114" />
+          <folding>
+            <element signature="e#60#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
