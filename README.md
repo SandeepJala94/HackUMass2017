@@ -11,15 +11,16 @@ from the internet.
 
 Method
 ------
-1. Scrape the internet for Trump's tweets and interview
-responses. This data is used to fill TrumpBot's vocabulary.
+1. Use [Selenium][1] to scrape the internet for Trump's tweets 
+and interview responses. This data is used to fill TrumpBot's
+vocabulary.
 
-2. After finding sources, we used BeautifulSoup to find the
+2. After finding sources, we used [BeautifulSoup][2] to find the
 desired html elements from the webpages and collected them
 into a text file.
 
 3. We then passed the collected data to a python script that
-uses nltk to separate each word and label it's part of 
+uses [NLTK][3] to separate each word and label it's part of 
 sentence (i.e. noun, verb, adjective, etc.).
 
 4. The data is then passed to another python script where it
@@ -45,11 +46,15 @@ Python scripts are then used to parse and clean the data
 from it's original source.
 
 ### Libraries
-- [Selenium](https://stackoverflow.com/questions/17309288/importerror-no-module-named-requests)
-- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
-- [NLTK](http://www.nltk.org/)
+- [Selenium][1]
+- [BeautifulSoup][2]
+- [NLTK][3]
 
 TEXT FILES
 ----------
 The text files contain the parsed data from
 each step of data collection process.
+
+[1]: http://www.seleniumhq.org/        "Selenium"
+[2]: https://www.crummy.com/software/BeautifulSoup/  "BeautifulSoup"
+[3]: http://www.nltk.org/    "NLTK"
