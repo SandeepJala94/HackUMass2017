@@ -8,4 +8,4 @@ def transition(pos):
         return data[pos]
 
 
-print(transition("CC"))
+# print(transition("CC"))
