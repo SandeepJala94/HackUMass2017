@@ -47,7 +47,7 @@ All *HTML* files are stored in the *html* folder.
 The webpages were scraped to gather information for
 the chatbot.
 
-### HTML source files
+#### HTML source files
 - [politico-trump.html](https://github.com/SandeepJala94/HackUMass2017/blob/master/html/politico-trump.html)
 - [twitter-trump.html](https://github.com/SandeepJala94/HackUMass2017/blob/master/html/twitter-trump.html)
 
@@ -58,7 +58,7 @@ Python is used extensively to gather data from websites.
 Python scripts are then used to parse and clean the data
 from it's original source.
 
-### Libraries
+#### Libraries
 - [Selenium][1]
 - [BeautifulSoup][2]
 - [NLTK][3]
