@@ -1,6 +1,7 @@
 # Make a markov model based on the bigram_counts.txt file
 import json
 
+# Create dictionary for PoS relations.
 markov = dict()
 markov["CC"] = []
 markov["CD"] = []
@@ -45,6 +46,7 @@ lines = []
 for l in f:
     isfound = False
     if l is not "\n":
+        # Separate line from bigram counts to compare PoS
         line = l
         split = line.split(" ")
         print("1->", split)
@@ -52,6 +54,7 @@ for l in f:
         split = pos_trans.split(",")
         print("2->", split)
         first_pos, second_pos = split[0], split[1].replace(":", "")
+        # Loop through dictionary to check for existing Pos relation
         for j, markov_element in enumerate(markov[first_pos]):
             print(second_pos, ",", markov_element[0])
             print(markov_element)
@@ -63,11 +66,13 @@ for l in f:
             else:
                 isfound = False
 
+        # Add PoS to end because of first occurance
         if not isfound:
             markov[first_pos].append((second_pos, freq))
             print('nva--------------------------------------')
             isfound = True
 
+        # Check for mirror relation of PoS
         for j, markov_element in enumerate(markov[second_pos]):
             if markov[second_pos][j][0] == first_pos:
                 markov[second_pos][j] = (first_pos, markov_element[1] + freq)
@@ -80,6 +85,7 @@ for l in f:
             markov[second_pos].append((first_pos, freq))
             isfound = True
 
+# Write to json
 with open('../txt/pos-transitions.txt', 'w') as outfile:
     json.dump(markov, outfile)
 
