@@ -31,3 +31,6 @@ with open('csv/dialougues.csv','r',encoding='utf-16LE') as dialougues:
                     Transition_response[transition][trump_tag]+=1
                 except Exception:
                     Transition_response[transition][trump_tag]=1
+
+with open("trump_response.json",'w') as f:
+    json.dump(Transition_response,f)
