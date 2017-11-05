@@ -26,7 +26,7 @@ sentence (i.e. noun, verb, adjective, etc.).
 4. The data is then passed to another python script where it
 is cleared of any extraneous data such as *urls* or special
 characters.
-'
+`
 North NNP
 Korea NNP
 knew VBD
@@ -38,7 +38,7 @@ was VBD
 going VBG
 to TO
 do VB
-'
+`
 
 Data
 ====
