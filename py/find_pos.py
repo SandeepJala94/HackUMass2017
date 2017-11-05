@@ -16,19 +16,18 @@ def best_pos(seq):
     trump_pos = None
     with open("../json/pos-transitions.json") as f:
         trump_pos=json.load(f)
-
     dictionary = {}
     for i in seq:
-        key = str(i)
-        d_update = trump_pos.get(key)
+        key1 = str(i[0])
+        key2 = str(i[1])
+        d_update = trump_pos.get(key1)
         if d_update==None:
             continue
         dictionary=dict(Counter(d_update)+Counter(dictionary))
 
-    print(dictionary)
+    if "." in dictionary:
+        del myDict['.']
 
+    max_key=max(dictionary.items(), key=operator.itemgetter(1))
 
-
-    max_key=max(dictionary.items(), key=operator.itemgetter(1))[0]
-
-    return parse_tuple(max_key)[1]
+    return max_key[0]

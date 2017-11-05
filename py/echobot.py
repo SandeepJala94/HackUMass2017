@@ -5,7 +5,7 @@ import requests
 import time
 import urllib
 import nltk
-import generate_sentence
+from generate_sentence import generate_sentence
 import find_pos
 import transitions
 
@@ -98,7 +98,10 @@ def findMain(text, chat):
 
     valu = find_pos.best_pos(POS_Order)
     PoS_seq = transitions.transition(valu)
+    print(PoS_seq)
     sentence = generate_sentence(PoS_seq)
+    print("sentence = generate_sentence(PoS_seq)")
+    print("FUCK YEA")
     #send_message(str(POS_Order), chat)
     #send_message(valu, chat)
     send_message(sentence, chat)

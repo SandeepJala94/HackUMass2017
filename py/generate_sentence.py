@@ -12,7 +12,8 @@ def select(container, weights):
             break
     return element
 
-def make_sentences(pos_seq):
+def generate_sentence(pos_seq):
+
     word_corpus={}
     with open('../txt/trump-pos-corpus.json','r') as f:
         word_corpus=json.load(f)
@@ -25,7 +26,3 @@ def make_sentences(pos_seq):
             weights.append(word_corpus[pos][key])
         sentence = sentence+' '+select(words, weights)
     return sentence
-
-
-
-print(make_sentences(["NNP","CC"]))
