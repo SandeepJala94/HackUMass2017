@@ -28,18 +28,20 @@ def select(container, weights):
 def transition(pos):
 
     with open('../json/pos-transitions.json') as data_file:
+        print(31)
         data = json.load(data_file)
+        print(33)
         max_seq = 20
+        print(35)
         pos_seq = [pos]
-
+        print(37)
         while max_seq:
+            print(39)
             weights = data[pos].values()
             containers = data[pos].keys()
             next_pos = select(containers,weights)
-            if(next_pos=='.'):
-                break
             pos_seq.append(next_pos)
-        pos_seq.append('.')
+            max_seq-=1
 
         return pos_seq
 
@@ -47,9 +49,4 @@ def transition(pos):
 
 
 
-
-
-
-
-
-
+print(transition("."))

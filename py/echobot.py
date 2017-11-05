@@ -17,18 +17,7 @@ URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
 
-#The following section simply reads the txt files
-file = open("../txt/bigram_counts.txt", "r",encoding="utf-8")
-bigram_counts = file.read()
 
-file = open("../txt/trump-pos-corpus.txt", "r",encoding="utf-8")
-trump_pos_corpus = file.read()
-
-#file = open("../txt/trump_tweets.txt", "r",encoding="utf-8")
-#trump_tweets = file.read()
-
-file = open("../txt/trump_tweets_pos.txt", "r",encoding="utf-8")
-trump_tweets_pos = file.read()
 
 
 

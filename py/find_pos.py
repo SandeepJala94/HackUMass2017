@@ -14,7 +14,7 @@ def parse_tuple(string):
 
 def best_pos(seq):
     trump_pos = None
-    with open("../json/trump_response.json") as f:
+    with open("../json/pos-transitions.json") as f:
         trump_pos=json.load(f)
 
     dictionary = {}
@@ -24,6 +24,10 @@ def best_pos(seq):
         if d_update==None:
             continue
         dictionary=dict(Counter(d_update)+Counter(dictionary))
+
+    print(dictionary)
+
+
 
     max_key=max(dictionary.items(), key=operator.itemgetter(1))[0]
 
