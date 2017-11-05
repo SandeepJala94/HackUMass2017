@@ -2,7 +2,6 @@ import json
 import requests
 import time
 import urllib
-import nltk
 
 TOKEN = "479176894:AAHvXzZBhfh9YG9URDpn9SE9CoTQcx28xRc"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
@@ -67,33 +66,13 @@ def echo_all(updates):
         except Exception as e:
             print(e)
     
-    
-    
-def analyzeString(updates):
-    for update in updates["result"]:
-        try:
-            text = update["message"]["text"]
-            chat = update["message"]["chat"]["id"]
-            newText = 'length of text is ' + str(len(text))
-            send_message(newText, chat)
-            findMainTopic(text, chat)
-        except Exception as e:
-            print(e)
-    
-    
-def findMainTopic(text, chat):
-    print(nltk.pos_tag(nltk.word_tokenize(text)))
-    send_message(str(nltk.pos_tag(nltk.word_tokenize(text))), chat)
-
-    
 def main():
     last_update_id = None
     while True:
         updates = get_updates(last_update_id)
         if len(updates["result"]) > 0:
             last_update_id = get_last_update_id(updates) + 1
-            analyzeString(updates)
-            #echo_all(updates)
+            echo_all(updates)
         time.sleep(0.5)
 
 
