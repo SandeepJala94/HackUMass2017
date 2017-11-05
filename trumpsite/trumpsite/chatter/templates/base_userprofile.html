@@ -4,10 +4,10 @@
 
     <!-- Webpage Pixel Icon -->
     {% load static %}
-    <link rel="icon" type="image/gif" href="{% static 'pic/pixel-gif-drawing.gif' %}">
+    <link rel="icon" type="image/jpg" href="{% static 'pic/trump_icon.jpg' %}">
 
     <!-- Title of Webpage -->
-    {% block title %}<title>Track N&apos; Drive</title>{% endblock %}
+    {% block title %}<title>Trump Bot</title>{% endblock %}
 
     <!-- Specify character set for webpage content -->
     <meta charset="utf-8">
@@ -25,35 +25,35 @@
 
     <!-- jQuery library -->
     <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 
     <!-- Latest compiled JavaScript -->
     <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
     <!-- Add additional CSS in static file -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <style>
-        .LiveChat{
-            position:absolute;
-            bottom:0%;
-            height:10%;
-            background-color:red;
-        }
-    </style>
-    <script>
-        $(document).ready(function()
-        {
-            $("#chatBtn").click(function()
-        {
-            $(".LiveChat").css("height","30%");
-        });
-        });
+    <!--<style>-->
+    <!--.LiveChat{-->
+    <!--position:absolute;-->
+    <!--bottom:0%;-->
+    <!--height:10%;-->
+    <!--background-color:red;-->
+    <!--}-->
+    <!--</style>-->
+    <!--<script>-->
+    <!--$(document).ready(function()-->
+    <!--{-->
+    <!--$("#chatBtn").click(function()-->
+    <!--{-->
+    <!--$(".LiveChat").css("height","30%");-->
+    <!--});-->
+    <!--});-->
 
-    </script>
+    <!--</script>-->
 </head>
 
 <body>
@@ -61,13 +61,29 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
             <div class="row">
                 {% block usercontent %}{% endblock %}
             </div>
         </div>
+        <div class="col-md-2"></div>
     </div>
 
 </div>
+
+{% block js %}
+<script>
+    var chatinput = document.getElementById("chatinput");
+    chatinput.addEventListener("onkeypress", function(e) {
+          if(e.keyCode == 13) {
+               var text_area = document.getElementById("chatwindow");
+               text_area.value += "\n" + chatinput.value;
+               chatinput = "";
+          }
+    })
+</script>
+{% endblock js %}
+
 </body>
 </html>
