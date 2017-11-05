@@ -35,8 +35,8 @@ The webpages were scraped to gather information for
 the chatbot.
 
 ### HTML source files
-- politico-trump.html
-- twitter-trump.html
+- [politico-trump.html](https://github.com/SandeepJala94/HackUMass2017/blob/master/html/politico-trump.html)
+- [twitter-trump.html](https://github.com/SandeepJala94/HackUMass2017/blob/master/html/twitter-trump.html)
 
 PYTHON
 ------
@@ -45,9 +45,9 @@ Python scripts are then used to parse and clean the data
 from it's original source.
 
 ### Libraries
-- Selenium
-- BeautifulSoup
-- nltk
+- [Selenium](https://stackoverflow.com/questions/17309288/importerror-no-module-named-requests)
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+- [NLTK](http://www.nltk.org/)
 
 TEXT FILES
 ----------
