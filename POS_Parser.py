@@ -32,7 +32,11 @@ for pos in f:
     # not a link or @ or #
     if part_of_speech in words:
         if not re.compile("[@#%_=()]|[\/\/]|[a-zA-Z]{2,}\.|[a-zA-Z]{2,}[\/]*[a-zA-Z0-9]{2,}\.[a-zA-Z]{1,}[\/]?[a-zA-Z0-9]{1,}").match(word) \
-                and not re.compile("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}").match(word):
+            and not re.compile("https").match(word)\
+            and not re.compile("http").match(word)\
+            and not re.compile("@").match(word)\
+            and not re.compile("\S+\.[\w+(\/?)\S*]{3,}").match(word)\
+            and not re.compile("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}").match(word):
             for j, tup in enumerate(words[part_of_speech]):
                 if word == tup[0]:
                     words[part_of_speech][j] = (word, tup[1] + 1)
@@ -47,7 +51,11 @@ for pos in f:
 
     else:
         if not not re.compile("[@#%_=()]|[\/\/]|[a-zA-Z]{2,}\.|[a-zA-Z]{2,}[\/]*[a-zA-Z0-9]{2,}\.[a-zA-Z]{1,}[\/]?[a-zA-Z0-9]{1,}").match(word) \
-                and not re.compile("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}").match(word):
+           and not re.compile("\S+\.[\w+(\/?)\S*]{3,}").match(word)\
+           and not re.compile("https").match(word)\
+           and not re.compile("http").match(word)\
+           and not re.compile("@").match(word)\
+           and not re.compile("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}").match(word):
             words[part_of_speech] = [(word, 1)]
     pos_lines.append(part_of_speech)
 
