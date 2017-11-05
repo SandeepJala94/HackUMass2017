@@ -1,5 +1,6 @@
 import json 
 import requests
+import tweet_text_grabber.py as tweet_text_grabber
 
 TOKEN = "<your-bot-token>"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
@@ -15,6 +16,10 @@ def get_json_from_url(url):
     content = get_url(url)
     js = json.loads(content)
     return js
+
+
+def get_text_from_url(url):
+    tweet_text_grabber.getText(url)
 
 
 def get_updates():
