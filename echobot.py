@@ -8,6 +8,15 @@ TOKEN = "479176894:AAHvXzZBhfh9YG9URDpn9SE9CoTQcx28xRc"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
+file = open("../txt/trump_tweets_pos.txt","r")
+trump_tweets_pos = file.read() 
+
+file = open("../txt/trump-pos-corpus.txt", "r")
+trump_pos_corpus = file.read()
+
+file = open("../txt/bigram_counts.txt", "r")
+bigram_counts = file.read()
+
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
@@ -76,15 +85,46 @@ def analyzeString(updates):
             chat = update["message"]["chat"]["id"]
             newText = 'length of text is ' + str(len(text))
             send_message(newText, chat)
-            findMainTopic(text, chat)
+            mainWord, mainPOS, POS_Order = findMainTopic_POS(text, chat)
+            #buildSentenceWithMainWord(mainWord, mainPOS)
         except Exception as e:
             print(e)
     
     
-def findMainTopic(text, chat):
-    print(nltk.pos_tag(nltk.word_tokenize(text)))
-    send_message(str(nltk.pos_tag(nltk.word_tokenize(text))), chat)
+def findMainTopic_POS(text, chat):
+    word_pos = nltk.pos_tag(nltk.word_tokenize(text))
+    mainWord = ''
+    POS_Order = []
+    
+    for i in range(0, len(word_pos)):
+        if 'V' in word_pos[i][1] or 'N' in word_pos[i][1]:
+            mainWord = word_pos[i][0]
+            mainPOS = word_pos[i][1]
+            #i = len(word_pos)+1
+            send_message(str('Main word is ' + word_pos[i][0]), chat)
+            send_message(str('Main POS is ' + word_pos[i][1]), chat)
+            break
+    
+    
+    for i in range(0, len(word_pos)):
+        POS_Order.append(word_pos[i][1])
+        
+    send_message(str(POS_Order), chat)
+    return mainWord, mainPOS, POS_order
+    #send_message(str(len(word_pos)), chat)
+    
+    
 
+
+    
+    
+#def buildSentenceWithMainWord(mainWord, mainPOS):
+    
+    
+    
+    
+    
+    
     
 def main():
     last_update_id = None
