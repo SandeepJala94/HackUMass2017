@@ -43,29 +43,33 @@ isfound = False
 lines = []
 for l in f:
     line = l
-    split = line.split(" ")
-    pos_trans, freq = split[0], split[1]
-    split = pos_trans.split(",")
-    first_pos, second_pos = split[0], split[1]
-    for markov_element in markov[first_pos]:
-        if markov_element[0] == second_pos:
-            markov_element = (second_pos, markov_element[1] + freq)
-            isfound = True
-            break
+    if l is not "\n":
+        split = line.split(" ")
+        print("1->", split)
+        pos_trans, freq = split[0], int(split[1].replace("\n", ""))
+        split = pos_trans.split(",")
+        print("2->", split)
+        first_pos, second_pos = split[0], split[1].replace(":", "")
+        for j, markov_element in enumerate(markov[first_pos]):
+            print(second_pos, ",", markov_element[0])
+            if markov_element[0] == second_pos:
+                markov[first_pos][j] = (second_pos, markov[first_pos][j][1] + freq)
+                isfound = True
+                break
 
-    if not isfound:
-        markov[first_pos].append((first_pos, freq))
-        isfound = False
+        if not isfound:
+            markov[first_pos].append((second_pos, freq))
+            isfound = False
 
-    for markov_element in markov[second_pos]:
-        if markov_element[0] == first_pos:
-            markov_element = (second_pos, markov_element[1] + freq)
-            isfound = True
-            break
+        for j, markov_element in enumerate(markov[second_pos]):
+            if markov[second_pos][j][0] == first_pos:
+                markov[second_pos][j] = (first_pos, markov_element[1] + freq)
+                isfound = True
+                break
 
-    if not isfound:
-        markov[second_pos].append((second_pos, freq))
-        isfound = False
+        if not isfound:
+            markov[second_pos].append((second_pos, freq))
+            isfound = False
 
 print(markov)
 
