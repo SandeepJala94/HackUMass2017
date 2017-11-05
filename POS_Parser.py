@@ -1,9 +1,11 @@
 # Find common linguistic patterns
 # in Donald Trump Tweets
 
+import pandas
+
 # Get the contents of the file
 # Delimit by spaces and grab the last element
-f = open('./trump_tweets_pos.txt', 'r', encoding = 'utf-8')
+f = open('./trump_tweets_pos.txt', 'r', encoding='utf-8')
 
 # Make a list of pos
 pos_lines = []
@@ -27,35 +29,26 @@ for pos in f:
     # Determine if the part of speech is a key in the dictionary
     # see if the word exists in the dictionary and the word is
     # not a link or @ or #
-    if part_of_speech in words \
-            and not word.__contains__(".*:\/\/.*") \
-            and not word.__contains__(".*\..*\..*\/.*") \
-            and not word.__contains__(".*@.*\..*")\
-            and not word.__contains__("@")\
-            and not word.__contains__("#")\
-            and not word.__contains__("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}"):
-        for j, tup in enumerate(words[part_of_speech]):
-            if word == tup[0]:
-                words[part_of_speech][j] = (word, tup[1] + 1)
-                isfound = True
-                break
-            else:
+    if part_of_speech in words:
+        if not pandas.Series.word.contains("[@#%_=()]|[\/\/]|[a-zA-Z]{2,}\.|[a-zA-Z]{2,}[\/]*[a-zA-Z0-9]{2,}\.[a-zA-Z]{1,}[\/]?[a-zA-Z0-9]{1,}", regex=True) \
+                and not pandas.Series.contains("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}", regex=True):
+            for j, tup in enumerate(words[part_of_speech]):
+                if word == tup[0]:
+                    words[part_of_speech][j] = (word, tup[1] + 1)
+                    isfound = True
+                    break
+                else:
+                    isfound = False
+
+            if not isfound:
+                words[part_of_speech].append((word, 1))
                 isfound = False
 
-        if not isfound:
-            words[part_of_speech].append((word, 1))
-            isfound = False
-
     else:
-        if not word.__contains__(".*:\/\/.*") \
-           and not word.__contains__(".*\..*\..*\/.*") \
-           and not word.__contains__(".*@.*\..*")\
-           and not word.__contains__("@") \
-           and not word.__contains__("#") \
-           and not word.__contains__("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}"):
+        if not not pandas.Series.word.contains("[@#%_=()]|[\/\/]|[a-zA-Z]{2,}\.|[a-zA-Z]{2,}[\/]*[a-zA-Z0-9]{2,}\.[a-zA-Z]{1,}[\/]?[a-zA-Z0-9]{1,}", regex=True) \
+                and not pandas.Series.word.contains("[\+]?[\d]*[\.|\-]?[(]?[\d]{3}[)]?[\.|\-]*[\d]{3}[\.|\-]*[\d]{4}", regex=True):
             words[part_of_speech] = [(word, 1)]
     pos_lines.append(part_of_speech)
-
 
 # Make a temporary list to hold individual tweet patterns
 temp = []
@@ -79,9 +72,12 @@ for p in pos_lines:
 bigram_pos_counts = dict()
 
 for tweet in tweet_patterns:
-    tweet = [pos for pos in tweet if pos in ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS', 'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'SYM', 'TO', 'UH', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WP$', 'WRB']]
-    for i in range(len(tweet)-1):
-        bigram_pos = (tweet[i], tweet[i+1])
+    tweet = [pos for pos in tweet if
+             pos in ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS',
+                     'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'SYM', 'TO', 'UH', 'VB', 'VBD', 'VBG',
+                     'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WP$', 'WRB']]
+    for i in range(len(tweet) - 1):
+        bigram_pos = (tweet[i], tweet[i + 1])
         if bigram_pos in bigram_pos_counts:
             bigram_pos_counts[bigram_pos] += 1
         else:
@@ -110,4 +106,3 @@ for count in bigram_pos_counts:
     # bigram_counts_file.write(output)
 bigram_counts_file.close()
 print("done")
-
