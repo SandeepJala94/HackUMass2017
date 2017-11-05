@@ -28,4 +28,4 @@ def make_sentences(pos_seq):
 
 
 
-print(make_sentences(["NNP","CC"]))
+#print(make_sentences(["NNP","CC"]))

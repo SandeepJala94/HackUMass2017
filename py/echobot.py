@@ -5,8 +5,9 @@ import requests
 import time
 import urllib
 import nltk
-#import trump_sass_learner
+import generate_sentence
 import find_pos
+import transitions
 
 #unique token to represent the echobot 
 TOKEN = "479176894:AAHvXzZBhfh9YG9URDpn9SE9CoTQcx28xRc"
@@ -98,8 +99,8 @@ def findMain(text, chat):
         if 'NN' in word_pos[i][1]:
             mainWord = word_pos[i][0]
             mainPOS = word_pos[i][1]
-            send_message('Main word is ' + mainWord, chat)
-            send_message('Main POS is ' + mainPOS, chat)
+            #send_message('Main word is ' + mainWord, chat)
+            #send_message('Main POS is ' + mainPOS, chat)
             break
             
     for i in range(0, len(word_pos)-1):
@@ -107,8 +108,11 @@ def findMain(text, chat):
         
     
     valu = find_pos.best_pos(POS_Order)
-    send_message(str(POS_Order), chat)
-    send_message(valu, chat)
+    PoS_seq = transitions.transition(valu)
+    sentence = generate_sentence(PoS_seq)
+    #send_message(str(POS_Order), chat)
+    #send_message(valu, chat)
+    send_message(sentence, chat)
     
     return mainWord, mainPOS, POS_Order
 
