@@ -33,8 +33,8 @@ def transition(pos):
         pos_seq = [pos]
 
         while max_seq:
-            weights = data[a].values()
-            containers = data[a].keys()
+            weights = data[pos].values()
+            containers = data[pos].keys()
             next_pos = select(containers,weights)
             if(next_pos=='.'):
                 break

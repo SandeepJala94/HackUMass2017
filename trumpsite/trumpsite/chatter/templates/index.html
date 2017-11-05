@@ -4,28 +4,19 @@
 
 {% block usercontent %}
 <!-- Main Row Content for page components -->
-<div class="panel panel-default">
-    <div class="panel-heading text-center">
-        <div class="panel-title">
-            Trump Bot Chat
-        </div>
-    </div>
-    <div class="panel-body">
-        <div class="text-center">
-            <textarea id="chatwindow" class="text-left" readonly rows="10" cols="50">
-                {% for message in chat %}
-                {{ message.name }}: {{ message.contents }}
-                {% endfor %}
-            </textarea>
-        </div>
-        <br/>
-        <hr>
-        <form class="text-center">
-            <input type="text" id="chatinput" size="45">
-            <button type="button" class="btn btn-primary">submit</button>
-            <!-- End of first button of group -->
-        </form>
 
-    </div>
-</div>
+<textarea id="chatwindow" class="text-left" readonly rows="10" cols="50">
+    {% for message in chat %}
+    {{ message.name }}: {{ message.contents }}
+    {% endfor %}
+</textarea>
+<br/>
+<hr>
+<form class="text-center" action="/index" method="POST">
+    <input type="text" id="chatinput" size="45">
+    <button type="button" class="btn btn-primary"><a href="{% url 'post_new' %}" class="top-menu"></a></button>
+    <!-- End of first button of group -->
+</form>
+
+
 {% endblock %}
