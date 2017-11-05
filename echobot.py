@@ -1,6 +1,5 @@
 import json 
 import requests
-import tweet_text_grabber.py as tweet_text_grabber
 import time
 import urllib
 
@@ -24,7 +23,7 @@ def get_text_from_url(url):
     tweet_text_grabber.getText(url)
 
 
-d#ef get_updates():
+#def get_updates():
     #url = URL + "getUpdates"
     #js = get_json_from_url(url)
     #return js
