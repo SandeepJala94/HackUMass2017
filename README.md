@@ -25,20 +25,9 @@ sentence (i.e. noun, verb, adjective, etc.).
 
 4. The data is then passed to another python script where it
 is cleared of any extraneous data such as *urls* or special
-characters.
-`
-North NNP
-Korea NNP
-knew VBD
-exactly RB
-what WP
-President NNP
-Obama NNP
-was VBD
-going VBG
-to TO
-do VB
-`
+characters. It is then organized and iterations are added together.
+
+`JJ:[('great', 118), ('many', 37), ('big', 32), ('much', 22), ('last', 21), ('good', 20), ('first', 19), ('american', 17), ('wonderful', 15), ('military', 15)`
 
 Data
 ====
