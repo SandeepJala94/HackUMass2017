@@ -15,7 +15,7 @@ for line in f:
     dictionary
     i+=1
 
-    print(i)
+    #print(i)
     # Delimit the line by space
     line_split = line.split(" ")
     # Get the word
@@ -36,7 +36,7 @@ for line in f:
             dictionary[PoS]={}
             dictionary[PoS][word]=1
 
-for elem in dictionary:
-    print(elem)
+#for elem in dictionary:
+    #print(elem)
 with open('../txt/trump-pos-corpus.json', 'w') as f:
     json.dump(dictionary,f)

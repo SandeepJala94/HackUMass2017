@@ -64,26 +64,26 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="row">
-                {% block usercontent %}{% endblock %}
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <div class="panel-title">
+                            Trump Bot Chat
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-center">
+                            {% block usercontent %}{% endblock %}
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-2"></div>
     </div>
 
 </div>
-
-{% block js %}
-<script>
-    var chatinput = document.getElementById("chatinput");
-    chatinput.addEventListener("onkeypress", function(e) {
-          if(e.keyCode == 13) {
-               var text_area = document.getElementById("chatwindow");
-               text_area.value += "\n" + chatinput.value;
-               chatinput = "";
-          }
-    })
-</script>
-{% endblock js %}
 
 </body>
 </html>

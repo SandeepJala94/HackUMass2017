@@ -16,3 +16,4 @@ class Chat(models.Model):
         String for representing the Model object (in Admin site etc.)
         """
         return str(self.name) + ": " + str(self.contents)
+
